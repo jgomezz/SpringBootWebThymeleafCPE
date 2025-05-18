@@ -1,6 +1,7 @@
 package pe.edu.tecsup.tienda.webs;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
@@ -11,7 +12,10 @@ public class ProductoController {
      * @return
      */
     @GetMapping("/productos")
-    public String index() {
+    public String index(Model model) throws Exception {
+
+        model.addAttribute("message","Hola Mundo");
+
         return "productos";
     }
 
