@@ -28,6 +28,11 @@
 
         <div class="container-fluid">
 
+            <!-- Conditional rendering -->
+            <div th:if="${productos.size() > 3}">
+                <p>Hay más de 3 celulares!</p>
+            </div>
+
             <br>
             <span th:text="${mensaje}"/>
             <br>
