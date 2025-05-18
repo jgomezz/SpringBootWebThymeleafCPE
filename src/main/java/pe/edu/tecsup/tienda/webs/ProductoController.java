@@ -14,7 +14,8 @@ public class ProductoController {
     @GetMapping("/productos")
     public String index(Model model) throws Exception {
 
-        model.addAttribute("message","Hola Mundo");
+        model.addAttribute("mensaje",
+                "Hola Mundo Aprendiendo Spring Boot");
 
         return "productos";
     }
