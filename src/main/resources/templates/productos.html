@@ -4,31 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css} "/>
+
 </head>
 <body>
-    Listado de Productos
-    <br>
-    <span th:text="${mensaje}"/>
 
-    <br>
-    <span th:text="${productos}"/>
+    <div class="Container">
 
-    <table class="table" >
-        <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="item : ${productos}">
-            <td th:text="${item.nombre}"/>
-            <td th:text="${item.precio}"/>
-        </tr>
-        </tbody>
-    </table>
+        <h1>Listado de Productos </h1>
 
+        <div class="container-fluid">
 
+            <br>
+            <span th:text="${mensaje}"/>
+            <br>
+            <table class="table" >
+                <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="item : ${productos}">
+                    <td th:text="${item.nombre}"/>
+                    <td th:text="${item.precio}"/>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
 
 </body>
 </html>
